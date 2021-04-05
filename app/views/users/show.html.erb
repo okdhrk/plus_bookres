@@ -1,2 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-4">
+      <%= render 'layouts/prf', user: current_user, book: @book %>
+    </div>
+
+    <div class="col">
+      <h2>Books</h2>
+      <table class="table">
+        <tr>
+          <th class="text-center", style="width:30%">Title</th>
+          <th style="width:70%">Opinion</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
