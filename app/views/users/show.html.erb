@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mt-3">
     <div class="col-4">
-      <%= render 'layouts/prf', user: current_user, book: @book %>
+      <%= render 'layouts/prf', user: current_user, book: Book.new %>
     </div>
 
     <div class="col">
@@ -10,6 +10,12 @@
         <tr>
           <th class="text-center", style="width:30%">Title</th>
           <th style="width:70%">Opinion</th>
+        </tr>
+        <tr>
+          <% @books.each do |book| %>
+            <th><%= book.title %></th>
+            <th><%= book.body %></th>
+          <% end %>
         </tr>
       </table>
     </div>
